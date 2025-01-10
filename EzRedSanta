@@ -1139,3 +1139,4 @@ Dropdown:OnChanged(function(selectedLocation)
         end
     end
 end)
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6", false, game)
