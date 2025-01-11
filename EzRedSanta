@@ -1,4 +1,5 @@
----- ทดลอง Fluent ui Krampus
+
+---- ทดลอง Fluent ui Red Santa
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -110,7 +111,7 @@ do
                                     timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
                                 }
                                 (syn and syn.request or http_request) {
-                                    Url = 'https://discord.com/api/webhooks/1194553670449238016/oQvL4ll1O7iwFhvUCUKL33Yh9kqPQxhFOIiiwbBnU08Nrwpd7nXVLPP8oEkN3xmzGaKh',
+                                    Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
                                     Method = 'POST',
                                     Headers = { ['Content-Type'] = 'application/json' },
                                     Body = game:GetService('HttpService'):JSONEncode({ content = Content, embeds = { Embed } }),
@@ -191,7 +192,7 @@ do
                 }
     
                 local requestData = {
-                    Url = 'https://discord.com/api/webhooks/1194553670449238016/oQvL4ll1O7iwFhvUCUKL33Yh9kqPQxhFOIiiwbBnU08Nrwpd7nXVLPP8oEkN3xmzGaKh',
+                    Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
                     Method = 'POST',
                     Headers = { ['Content-Type'] = 'application/json' },
                     Body = game:GetService('HttpService'):JSONEncode({ content = Content, embeds = { Embed } }),
@@ -272,7 +273,7 @@ do
                                 timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
                             }
                             (syn and syn.request or http_request) {
-                                Url = 'https://discord.com/api/webhooks/1194553670449238016/oQvL4ll1O7iwFhvUCUKL33Yh9kqPQxhFOIiiwbBnU08Nrwpd7nXVLPP8oEkN3xmzGaKh',
+                                Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
                                 Method = 'POST',
                                 Headers = { ['Content-Type'] = 'application/json' },
                                 Body = game:GetService('HttpService'):JSONEncode({ content = Content; embeds = { Embed } }),
@@ -305,7 +306,7 @@ do
                             timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
                         }
                         (syn and syn.request or http_request) {
-                            Url = 'https://discord.com/api/webhooks/1194553670449238016/oQvL4ll1O7iwFhvUCUKL33Yh9kqPQxhFOIiiwbBnU08Nrwpd7nXVLPP8oEkN3xmzGaKh',
+                            Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
                             Method = 'POST',
                             Headers = { ['Content-Type'] = 'application/json' },
                             Body = game:GetService('HttpService'):JSONEncode({ embeds = { Embed } }),
@@ -404,10 +405,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Event Krampus",
+    Title = "Warp Farming Event Red Santa",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-195.03929138183594, 26.669872283935547, 2351.409912109375)
+        local targetPosition = CFrame.new(-38.223114013671875, 20.098716735839844, -58.04430389404297)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -463,7 +464,7 @@ Tabs.Main:AddButton({
                                 timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
                             }
                             (syn and syn.request or http_request) {
-                                Url = 'https://discord.com/api/webhooks/1194553670449238016/oQvL4ll1O7iwFhvUCUKL33Yh9kqPQxhFOIiiwbBnU08Nrwpd7nXVLPP8oEkN3xmzGaKh',
+                                Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
                                 Method = 'POST',
                                 Headers = { ['Content-Type'] = 'application/json' },
                                 Body = game:GetService('HttpService'):JSONEncode({ content = Content, embeds = { Embed } }),
@@ -544,7 +545,7 @@ Tabs.Main:AddButton({
             }
 
             local requestData = {
-                Url = 'https://discord.com/api/webhooks/1194553670449238016/oQvL4ll1O7iwFhvUCUKL33Yh9kqPQxhFOIiiwbBnU08Nrwpd7nXVLPP8oEkN3xmzGaKh',
+                Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
                 Method = 'POST',
                 Headers = { ['Content-Type'] = 'application/json' },
                 Body = game:GetService('HttpService'):JSONEncode({ content = Content, embeds = { Embed } }),
