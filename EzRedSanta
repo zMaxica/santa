@@ -1,5 +1,4 @@
-
----- ทดลอง Fluent ui Red Santa
+---- ทดลอง Fluent ui Global
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -405,10 +404,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Event Red Santa",
+    Title = "Warp Farming Floor 8",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-38.223114013671875, 20.098716735839844, -58.04430389404297)
+        local targetPosition = CFrame.new(292.79608154296875, 58.900856018066406, -1424.84130859375)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -674,7 +673,7 @@ Tabs.Teleport:AddButton({
 Tabs.Teleport:AddButton({
     Title = "Boss room floor 6",
     Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1458.615966796875, 1144.77978515625, -428.0782470703125)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1464.9033203125, 1912.7052001953125, -427.1969299316406)
     end
 })
 -- สร้างปุ่มสำหรับเทเลพอร์ตไปยังห้องบอสชั้น 7
