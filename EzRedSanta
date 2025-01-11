@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Red Santa
+---- ทดลอง Fluent ui SBO R Global
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -404,10 +404,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Event Red Santa",
+    Title = "Warp Farming Floor 5",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-38.223114013671875, 20.098716735839844, -58.04430389404297)
+        local targetPosition = CFrame.new(-2294.54150390625, 386.88006591796875, -1856.322509765625)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -428,7 +428,7 @@ Tabs.Main:AddButton({
         spawn(function()
             local player = game.Players.LocalPlayer
             local character = player.Character or player.CharacterAdded:Wait()
-            local detectionRadius = 3500 -- ระยะการตรวจจับ
+            local detectionRadius = 1000 -- ระยะการตรวจจับ
 
             local placeID = 4734865416 -- Place ID ที่ต้องการวาร์ปไป
             local teleportService = game:GetService("TeleportService")
