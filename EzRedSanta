@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global
+---- ทดลอง Fluent ui Global how to
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
