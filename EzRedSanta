@@ -404,10 +404,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 8",
+    Title = "Warp Farming Floor 10 Boss",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(292.79608154296875, 58.900856018066406, -1424.84130859375)
+        local targetPosition = CFrame.new(-3986.162109375, -9930.0029296875, -7064.96826171875)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -428,7 +428,7 @@ Tabs.Main:AddButton({
         spawn(function()
             local player = game.Players.LocalPlayer
             local character = player.Character or player.CharacterAdded:Wait()
-            local detectionRadius = 3500 -- ระยะการตรวจจับ
+            local detectionRadius = 1000 -- ระยะการตรวจจับ
 
             local placeID = 4734865416 -- Place ID ที่ต้องการวาร์ปไป
             local teleportService = game:GetService("TeleportService")
