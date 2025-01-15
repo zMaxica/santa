@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global mini14
+---- ทดลอง Fluent ui Global mini14 tp
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
