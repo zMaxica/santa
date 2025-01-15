@@ -404,10 +404,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 14 MNBoss",
+    Title = "Warp Farming Floor 13 Boss",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(1978.2415771484375, 1713.2945556640625, -2163.97802734375)
+        local targetPosition = CFrame.new(4.35590029, 2266.74902, 31.5638084)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
