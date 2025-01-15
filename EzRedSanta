@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global mini14 tp
+---- ทดลอง Fluent ui Global floor 13 MOB
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -404,10 +404,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 14 miniboss",
+    Title = "Warp Farming Floor 13 mob",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(1978.2415771484375, 1713.2945556640625, -2163.97802734375)
+        local targetPosition = CFrame.new(-358.1244812011719, 2281.44580078125, 1041.4443359375)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
