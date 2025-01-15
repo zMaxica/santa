@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global floor 13 MOB
+---- ทดลอง Fluent ui Global fl14 MN
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -64,7 +64,7 @@ do
                 local humanoid = character:WaitForChild("Humanoid")
     
                 while true do
-                    if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 1 then
+                    if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 5 then
                         humanoid:MoveTo(targetPosition.Position)
                     end
                     wait(1)
@@ -404,10 +404,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 13 mob",
+    Title = "Warp Farming Floor 14 MNBoss",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-358.1244812011719, 2281.44580078125, 1041.4443359375)
+        local targetPosition = CFrame.new(1978.2415771484375, 1713.2945556640625, -2163.97802734375)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -417,7 +417,7 @@ Tabs.Main:AddButton({
             local humanoid = character:WaitForChild("Humanoid")
 
             while true do
-                if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 1 then
+                if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 5 then
                     humanoid:MoveTo(targetPosition.Position)
                 end
                 wait(1)
