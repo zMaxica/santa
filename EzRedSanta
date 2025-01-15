@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global fl14 MN
+---- ทดลอง Fluent ui Global fl3B
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
