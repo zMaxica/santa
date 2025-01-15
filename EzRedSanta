@@ -64,7 +64,7 @@ do
                 local humanoid = character:WaitForChild("Humanoid")
     
                 while true do
-                    if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 5 then
+                    if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 1 then
                         humanoid:MoveTo(targetPosition.Position)
                     end
                     wait(1)
@@ -417,7 +417,7 @@ Tabs.Main:AddButton({
             local humanoid = character:WaitForChild("Humanoid")
 
             while true do
-                if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 5 then
+                if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 1 then
                     humanoid:MoveTo(targetPosition.Position)
                 end
                 wait(1)
