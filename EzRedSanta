@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global Fl16 mb
+---- ทดลอง Fluent ui Global tp F
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -1139,4 +1139,46 @@ Dropdown:OnChanged(function(selectedLocation)
         end
     end
 end)
+
+-- พิมพ์แชท zMaxica
+Tabs.Settings:AddButton({
+    Title = "tp friend zMaxica",
+    Callback = function()
+-- แชท
+local args = {
+    [1] = "Local",
+    [2] = "tp friend zMaxica"
+}
+
+game:GetService("ReplicatedStorage").ChatEvent:FireServer(unpack(args))
+    end
+})
+
+-- พิมพ์แชท Darkfalcon_z
+Tabs.Settings:AddButton({
+    Title = "tp friend Darkfalcon_z",
+    Callback = function()
+-- แชท
+local args = {
+    [1] = "Local",
+    [2] = "tp friend Darkfalcon_z"
+}
+
+game:GetService("ReplicatedStorage").ChatEvent:FireServer(unpack(args))
+    end
+})
+
+-- พิมพ์แชท testerloadxxx
+Tabs.Settings:AddButton({
+    Title = "tp friend testerloadxxx",
+    Callback = function()
+-- แชท
+local args = {
+    [1] = "Local",
+    [2] = "tp friend testerloadxxx"
+}
+
+game:GetService("ReplicatedStorage").ChatEvent:FireServer(unpack(args))
+    end
+})
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6", false, game)
