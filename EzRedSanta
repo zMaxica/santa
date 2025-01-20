@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global F13M
+---- ทดลอง Fluent ui Global 2 TP
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -64,7 +64,7 @@ do
                 local humanoid = character:WaitForChild("Humanoid")
     
                 while true do
-                    if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 5 then
+                    if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 1 then
                         humanoid:MoveTo(targetPosition.Position)
                     end
                     wait(1)
@@ -404,10 +404,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 13 Mobs",
+    Title = "Warp Farming Floor 2 MiniBoss",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-358.1244812011719, 2281.44580078125, 1041.4443359375)
+        local targetPosition = CFrame.new(430.0721740722656, -1174.0589599609375, -485.5536193847656)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -417,7 +417,181 @@ Tabs.Main:AddButton({
             local humanoid = character:WaitForChild("Humanoid")
 
             while true do
-                if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 5 then
+                if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 1 then
+                    humanoid:MoveTo(targetPosition.Position)
+                end
+                wait(1)
+            end
+        end)
+
+        -- ฟังก์ชันที่ 3: ตรวจจับผู้เล่นใกล้เคียงและวาร์ป
+        spawn(function()
+            local player = game.Players.LocalPlayer
+            local character = player.Character or player.CharacterAdded:Wait()
+            local detectionRadius = 1000 -- ระยะการตรวจจับ
+
+            local placeID = 4734865416 -- Place ID ที่ต้องการวาร์ปไป
+            local teleportService = game:GetService("TeleportService")
+
+            local function teleportPlayer(targetPlayer)
+                teleportService:Teleport(placeID, targetPlayer)
+            end
+
+            while true do
+                for _, otherPlayer in pairs(game.Players:GetPlayers()) do
+                    if otherPlayer.Name ~= "testerloadsss" and otherPlayer.Name ~= "DarkFalcon_Z" and otherPlayer.Name ~= "zMaxica" and otherPlayer.Name ~= "testerloadxxx" and otherPlayer ~= player
+                        and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                        local otherCharacter = otherPlayer.Character
+                        local distance = (character.HumanoidRootPart.Position - otherCharacter.HumanoidRootPart.Position).Magnitude
+
+                        if distance <= detectionRadius then
+                            -- ส่งข้อมูลไปยัง Discord Webhook
+                            local OSTime = os.time()
+                            local Time = os.date('!*t', OSTime)
+                            local Content = 'Found a player, teleporting to a safe zone!'
+                            local Embed = {
+                                title = 'Nearby Player Detected',
+                                color = 99999,
+                                footer = { text = game.JobId },
+                                author = {
+                                    name = 'ROBLOX',
+                                    url = 'https://www.roblox.com/',
+                                },
+                                fields = {
+                                    { name = 'Teleporting...', value = 'Player is now moving to a safer place.' },
+                                },
+                                timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
+                            }
+                            (syn and syn.request or http_request) {
+                                Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
+                                Method = 'POST',
+                                Headers = { ['Content-Type'] = 'application/json' },
+                                Body = game:GetService('HttpService'):JSONEncode({ content = Content, embeds = { Embed } }),
+                            }
+
+                            -- วาร์ปผู้เล่นไปยัง Place ID
+                            print("พบผู้เล่นใกล้เคียง, กำลังวาร์ปไปยัง Place ID ที่กำหนด...")
+                            teleportPlayer(player)
+                            break
+                        end
+                    end
+                end
+                wait(1)
+            end
+        end)
+
+        -- ฟังก์ชันที่ 4: ตรวจสอบค่าเลือดและใช้งาน Health Crystal
+        local lastUsedTime = 0 -- เก็บเวลาใช้งานครั้งสุดท้าย
+        local cooldownTime = 30 -- ระยะเวลาคูลดาวน์ 30 วินาที
+
+        local function checkHealthAndUseCrystal()
+            local player = game.Players.LocalPlayer -- เข้าถึงผู้เล่นของเรา
+            local character = player.Character or player.CharacterAdded:Wait()
+            local humanoid = character:FindFirstChild("Humanoid") -- ตรวจสอบ Humanoid
+
+            if humanoid then
+                local currentHealth = humanoid.Health -- ค่าเลือดปัจจุบัน
+                local maxHealth = humanoid.MaxHealth -- ค่าเลือดสูงสุด
+
+                -- ตรวจสอบว่าเลือดต่ำกว่า 20% และยังไม่ติด Cooldown
+                if currentHealth / maxHealth <= 0.2 then
+                    local currentTime = os.time() -- เวลาปัจจุบัน
+                    if currentTime - lastUsedTime >= cooldownTime then
+                        -- ใช้ Health Crystal
+                        local args = {
+                            [1] = "Health Crystal"
+                        }
+                        game:GetService("ReplicatedStorage").UseConsumable:InvokeServer(unpack(args))
+
+                        -- อัปเดตเวลาที่ใช้ล่าสุด
+                        lastUsedTime = currentTime
+                        print("Health Crystal used!")
+                    else
+                        print("Health Crystal is on cooldown.")
+                    end
+                end
+            end
+        end
+
+        -- ฟังก์ชันตรวจสอบเลือดและใช้ Health Crystal ทุก 1 วินาที
+        game:GetService("RunService").Heartbeat:Connect(checkHealthAndUseCrystal)
+
+        -- ฟังก์ชันที่ 5: ตรวจสอบผู้เล่นที่เป็น Admin และวาร์ปไปยัง PlaceID
+        local AdminList = {3391044573, 1258519, 5352128, 8319210, 10512120, 17637379, 18436454, 18951266, 21877984, 27513204, 28822405, 32873573, 32985263, 34923509, 36104793, 36952262, 37613772, 37784616, 43839070, 46478188, 48921674, 58736484, 64219597, 70926245, 85430726, 88031195, 90504399, 118925802, 125287135, 125754354, 127723955, 165367193, 196467370, 207160289, 211117443, 265465705, 315063621, 394422754, 414043237, 655470167, 663289590, 682061085, 1275528885, 1277054439, 1419777109, 1509327150, 1653533349, 3097986992, 4952125890} 
+        local PrintUsernameOfPlayersJoining = true
+        local DestinationPlaceID = 4733278992 -- ใส่ PlaceID ที่ต้องการให้ Teleport ไป
+
+        local function SendToDiscordWebhook()
+            local OSTime = os.time()
+            local Time = os.date('!*t', OSTime)
+            local Avatar = 'https://cdn.discordapp.com/embed/avatars/4.png'
+            local Content = 'Found a Admin, teleporting to a safe game!'
+            local Embed = {
+                title = 'Detected Admin in the server',
+                color = 99999,
+                footer = { text = game.JobId },
+                author = {
+                    name = 'ROBLOX',
+                    url = 'https://www.roblox.com/',
+                },
+                fields = {
+                    {
+                        name = 'Teleporting...',
+                        value = 'Its time to go to new game please rejoin SBOR.',
+                    }
+                },
+                timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
+            }
+
+            local requestData = {
+                Url = 'https://discord.com/api/webhooks/1120037043200856174/64TZOaooeaqUMb5xqDAOKxODppDYATkNhGcLPtNvB5u6D1Po_vxepEZGqeCQiOHA9Sib',
+                Method = 'POST',
+                Headers = { ['Content-Type'] = 'application/json' },
+                Body = game:GetService('HttpService'):JSONEncode({ content = Content, embeds = { Embed } }),
+            }
+
+            (syn and syn.request or http_request)(requestData)
+        end
+
+        local function TeleportToPlace(player)
+            local TeleportService = game:GetService("TeleportService")
+            local success, err = pcall(function()
+                TeleportService:Teleport(DestinationPlaceID, player)
+            end)
+
+            if not success then
+                warn("Failed to teleport player: " .. err)
+            end
+        end
+
+        game.Players.PlayerAdded:Connect(function(player)
+            if PrintUsernameOfPlayersJoining then
+                print(player.Name .. " has joined the game")
+            end
+
+            if table.find(AdminList, player.UserId) then
+                SendToDiscordWebhook() -- ส่งข้อมูลไปยัง Discord webhook ก่อน teleport
+                TeleportToPlace(player)
+            end
+        end)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Warp Farming Floor 2 BOSS",
+    Callback = function()
+        -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
+        local targetPosition = CFrame.new(-959.6013793945312, 1927.7886962890625, -726.527099609375)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
+
+        -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
+        spawn(function()
+            local player = game.Players.LocalPlayer
+            local character = player.Character or player.CharacterAdded:Wait()
+            local humanoid = character:WaitForChild("Humanoid")
+
+            while true do
+                if (character.HumanoidRootPart.Position - targetPosition.Position).Magnitude > 1 then
                     humanoid:MoveTo(targetPosition.Position)
                 end
                 wait(1)
