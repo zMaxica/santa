@@ -1,10 +1,14 @@
----- ทดลอง Fluent ui Global 2 TP
+---- ทดลอง Fluent ui Global 2 F Hide gui
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = game.CoreGui
 
+-- เริ่มต้นซ่อน GUI
+ScreenGui.Enabled = false
+
+-- สร้าง ImageButton
 local ImageButton = Instance.new("ImageButton")
 ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1355,4 +1359,3 @@ local args = {
 game:GetService("ReplicatedStorage").ChatEvent:FireServer(unpack(args))
     end
 })
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6", false, game)
