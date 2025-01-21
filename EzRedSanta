@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global 3 4 B
+---- ทดลอง Fluent ui Global 5 6
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -405,10 +405,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 3 Boss",
+    Title = "Warp Farming Floor 5 Boss",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(777.805419921875, 2485.6650390625, 591.4876098632812)
+        local targetPosition = CFrame.new(-1738.6961669921875, 402.7967834472656, -1698.289794921875)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -579,10 +579,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 4 BOSS",
+    Title = "Warp Farming Floor 6 BOSS",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(520.5477905273438, 1188.1614990234375, 12508.857421875)
+        local targetPosition = CFrame.new(-1464.9033203125, 1912.7052001953125, -427.1969299316406)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
