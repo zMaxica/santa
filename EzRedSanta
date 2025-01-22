@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global 5 6
+---- ทดลอง Fluent ui Global AD
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -173,7 +173,7 @@ do
                 local OSTime = os.time()
                 local Time = os.date('!*t', OSTime)
                 local Avatar = 'https://cdn.discordapp.com/embed/avatars/4.png'
-                local Content = 'Found a Admin, teleporting to a safe game!'
+                local Content = '@armeng. Found a Admin, teleporting to a safe game!'
                 local Embed = {
                     title = 'Detected Admin in the server',
                     color = 99999,
@@ -526,7 +526,7 @@ Tabs.Main:AddButton({
             local OSTime = os.time()
             local Time = os.date('!*t', OSTime)
             local Avatar = 'https://cdn.discordapp.com/embed/avatars/4.png'
-            local Content = 'Found a Admin, teleporting to a safe game!'
+            local Content = '@armeng. Found a Admin, teleporting to a safe game!'
             local Embed = {
                 title = 'Detected Admin in the server',
                 color = 99999,
@@ -700,7 +700,7 @@ Tabs.Main:AddButton({
             local OSTime = os.time()
             local Time = os.date('!*t', OSTime)
             local Avatar = 'https://cdn.discordapp.com/embed/avatars/4.png'
-            local Content = 'Found a Admin, teleporting to a safe game!'
+            local Content = '@armeng. Found a Admin, teleporting to a safe game!'
             local Embed = {
                 title = 'Detected Admin in the server',
                 color = 99999,
