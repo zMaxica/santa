@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global new gen
+---- ทดลอง Fluent ui Global 2 F Hide gui
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -405,10 +405,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 5 Boss",
+    Title = "Warp Farming Floor 7 Boss",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-1738.6961669921875, 402.7967834472656, -1698.289794921875)
+        local targetPosition = CFrame.new(1427.142333984375, 22.60592269897461, 2617.802978515625)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -579,10 +579,10 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 6 BOSS",
+    Title = "Warp Farming Floor 8 BOSS",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-1464.9033203125, 1912.7052001953125, -427.1969299316406)
+        local targetPosition = CFrame.new(2810.048583984375, -568.3408203125, -1868.7069091796875)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -1285,9 +1285,6 @@ Tabs.FindPosition:AddButton({
 
 -- ย้ายเซิฟชั้นกิจกรรม
 
-Tabs.EventFloor:AddSection({
-    Title = "Change server"
-})
 Tabs.EventFloor:AddButton({
     Title = "Event Floor 2",
     Callback = function()
@@ -1312,10 +1309,6 @@ Tabs.EventFloor:AddButton({
     end
 })
 
--- auto farm
-Tabs.EventFloor:AddSection({
-    Title = "Auto Farm"
-})
 
 -- สร้างปุ่มสำหรับเทเลพอร์ตไปยังห้อง kai หิน
 Tabs.EventFloor:AddButton({
