@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global 2 F Hide gui
+---- ทดลอง Fluent ui Global sss
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -405,10 +405,10 @@ Tabs.Main:AddButton({
 })
 -------------------------------------------------------------------------------------------------------------
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 7 Boss",
+    Title = "Warp Farming Floor 11 MNBoss",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(1427.142333984375, 22.60592269897461, 2617.802978515625)
+        local targetPosition = CFrame.new(-1726.0042724609375, 4.999995231628418, -5793.5498046875)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -581,10 +581,10 @@ Tabs.Main:AddButton({
 -------------------------------------------------------------------------------------------------------------
 
 Tabs.Main:AddButton({
-    Title = "Warp Farming Floor 10 BOSS",
+    Title = "Warp Farming Floor 11 BOSS",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-3986.162109375, -9930.0029296875, -7064.96826171875)
+        local targetPosition = CFrame.new(-9470.400390625, -478.3359069824219, 1859.453369140625)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -989,17 +989,17 @@ Tabs.Changeserver:AddButton({
 })
 
 Tabs.Changeserver:AddButton({
-    Title = "Floor 9",
+    Title = "Floor 11",
     Callback = function()
-        local placeID = 4740039076
+        local placeID = 5135551944
         game:GetService("TeleportService"):Teleport(placeID, game.Players.LocalPlayer)
     end
 })
 
 Tabs.Changeserver:AddButton({
-    Title = "Floor 10",
+    Title = "Floor 12",
     Callback = function()
-        local placeID = 4747247314
+        local placeID = 5212666689
         game:GetService("TeleportService"):Teleport(placeID, game.Players.LocalPlayer)
     end
 })
