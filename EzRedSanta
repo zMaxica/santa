@@ -1,4 +1,4 @@
----- ทดลอง Fluent ui Global sss
+---- ทดลอง Fluent ui Global NewGEn
 local player = game.Players.LocalPlayer
 
 -- สร้าง GUI ใน CoreGui
@@ -584,7 +584,7 @@ Tabs.Main:AddButton({
     Title = "Warp Farming Floor 11 BOSS",
     Callback = function()
         -- ฟังก์ชันที่ 1: วาร์ปผู้เล่นไปยังตำแหน่งที่กำหนดทันที
-        local targetPosition = CFrame.new(-9470.400390625, -478.3359069824219, 1859.453369140625)
+        local targetPosition = CFrame.new(-9471.6953125, -478.3359375, 1881.975341796875)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = targetPosition
 
         -- ฟังก์ชันที่ 2: เคลื่อนที่ไปยังตำแหน่งเป้าหมายอย่างต่อเนื่อง
@@ -899,7 +899,7 @@ Tabs.Teleport2:AddButton({
 Tabs.Teleport2:AddButton({
     Title = "Boss floor 11",
     Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9470.400390625, -478.3359069824219, 1859.453369140625)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9471.6953125, -478.3359375, 1881.975341796875)
     end
 })
 -- สร้างปุ่มสำหรับเทเลพอร์ตไปยังห้อง Mini Boss ชั้น 9
